@@ -20,7 +20,7 @@ const stylingTemp = {
 }
 
 export default function Business({businessDetails} : {businessDetails: BusinessProps}) {
-    return (<div key={businessDetails.name +businessDetails.zipcode} className='flex flex-col font-sans m-10 w-4/12 min-w-[220px] max-w-[230px] h-[320px] min-h-[200px] p-2 bg-white' style={stylingTemp}>
+    return (<div key={businessDetails.name +businessDetails.zipcode} className='flex flex-col font-sans m-4 w-4/12 min-w-[220px] max-w-[230px] h-[400px] min-h-[200px] p-2 bg-white hover:bg-[rgb(209,151,35)] hover:text-white hover:cursor-pointer' style={stylingTemp}>
         <div className='relative h-[70%]'>
             <Image
                 src={businessDetails.image}
@@ -33,13 +33,13 @@ export default function Business({businessDetails} : {businessDetails: BusinessP
         </div>
         
         <div style={stylingTemp} className='min-h-[100px] h-[30%] align-baseline'>
-            <h1 className='font-bold text-xl text-wrap' >{businessDetails.name}</h1>
+            <h1 className='font-bold text-lg text-wrap max-h-10 min-w-[200px]' >{businessDetails.name}</h1>
 
             <div id='restaurantInfo' className="flex text-sm">
                 
                 <div id="restaurantLocation" className='justify-items-start w-8/12' >
-                    <p>{businessDetails.address}</p>
-                    <p>{businessDetails.city}</p>
+                    <p className='text-[0.9em]'>{businessDetails.address}</p>
+                    <p className='text-[0.9em]'>{businessDetails.city}</p>
                     <p className='text-[0.8em]'>{`${businessDetails.state} ${businessDetails.zipcode}`}</p>
                 </div>
                 

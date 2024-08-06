@@ -58,7 +58,7 @@ export default function BusinessContainer(){
 
         {!loading && restaurantsData.map((restaurantObj) => {
                 return (
-                <li key={restaurantObj.name} className="">
+                <li key={restaurantObj.name} className="flex">
                     <Business businessDetails={{...restaurantObj}} />
                 </li>
                 );

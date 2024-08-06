@@ -4,9 +4,9 @@ import BusinessContainer from "@/Container/BusinessContainer";
 export default function Body() {
 
 
-    return (<div className="flex bg-green-300 h-[75%] p-0">
-        <div className="bg-blue-600 mx-20 my-0 h-[100%] w-[100%]">
-            <ul className="flex flex-wrap">
+    return (<div className="flex overflow-auto h-[75%] p-0 align-top bg-green-200">
+        <div className=" mx-20 my-0 h-[100%] w-[100%] align-top">
+            <ul className="flex flex-wrap align-top justify-center">
                 <BusinessContainer />
             </ul>
         </div>
