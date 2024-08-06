@@ -5,7 +5,7 @@ import { BusinessProps } from "@/components/Business";
 import Business from "@/components/Business";
 
 // To load the database
-const str = [0, 1, 2,4];
+const str = [0, 1, 2, 3, 4, 5, 6];
 const dummyDataLocation = str.map( i => `database/dummyData${i}.json`);
 
 //Helper function to compare objects
@@ -46,7 +46,7 @@ export default function BusinessContainer(){
             });
 
         } catch (error) {
-            console.log(`something wrong with file loading...`);
+            console.log(`something wrong with file ---${resURL}--- loading...`);
         };
 
     } 
