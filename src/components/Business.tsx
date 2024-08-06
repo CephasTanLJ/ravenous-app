@@ -3,7 +3,7 @@ import Image  from 'next/image';
 import { buildCustomRoute } from 'next/dist/server/lib/router-utils/filesystem';
 import { styleText } from 'util';
 
-interface BusinessProps {
+export interface BusinessProps {
     image: string;
     name: string;
     address: string;
@@ -20,7 +20,7 @@ const stylingTemp = {
 }
 
 export default function Business({businessDetails} : {businessDetails: BusinessProps}) {
-    return (<div className='flex flex-col font-sans m-10 w-4/12 min-w-[220px] max-w-[220px] h-[300px] ' style={stylingTemp}>
+    return (<div key={businessDetails.name +businessDetails.zipcode} className='flex flex-col font-sans m-10 w-4/12 min-w-[220px] max-w-[230px] h-[320px] min-h-[200px] p-2 bg-white' style={stylingTemp}>
         <div className='relative h-[70%]'>
             <Image
                 src={businessDetails.image}
