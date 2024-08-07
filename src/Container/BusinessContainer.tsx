@@ -5,7 +5,7 @@ import { BusinessProps } from "@/components/Business";
 import Business from "@/components/Business";
 
 // To load the database
-const str = [0, 1, 2, 3, 4, 5, 6];
+const str = [0, 1, 2, 3, 4, 5];
 const dummyDataLocation = str.map( i => `database/dummyData${i}.json`);
 
 //Helper function to compare objects

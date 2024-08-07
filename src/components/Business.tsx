@@ -25,8 +25,8 @@ export default function Business({businessDetails} : {businessDetails: BusinessP
             <Image
                 src={businessDetails.image}
                 alt={`${businessDetails.name} restaurant`}
-                layout='fill'
-                objectFit='cover'
+                fill
+                sizes='100%'
                 style={stylingTemp}
             />
 
