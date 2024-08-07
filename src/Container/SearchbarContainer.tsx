@@ -11,7 +11,9 @@ const styleTemp = {
 export type filterStates = "BestMatch" | "HighestRated" | "MostReviewed"
 
 export default function SearchBarContainer(){
-    const  [activeFilter, setActiveFilter] = useState<filterStates>("BestMatch")
+    const [activeFilter, setActiveFilter] = useState<filterStates>("BestMatch");
+    const [businessType, setBusinessType] = useState<string>("");
+    const [location, setLocation] = useState<string>("");
 
     //Change viewing function when active filter change
     useEffect(()=>{
@@ -27,7 +29,8 @@ export default function SearchBarContainer(){
             backgroundBlendMode: "multiply",
         }} >
             <FilterSearchBar activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>  
-            <FormSearchBar />
+            <FormSearchBar businessType={businessType} setBusinessType={setBusinessType}
+            location={location} setLocation={setLocation}/>
         </div>
     );
 }
