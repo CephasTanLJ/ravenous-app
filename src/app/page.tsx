@@ -11,7 +11,7 @@ import { dummyData } from "@/database/dummyData";
 function Home() {
 
   return (
-    <main className='flex flex-col min-h-[100vw]'>
+    <main className='flex flex-col'>
       <Header />
       <Body />
       <Footer />
