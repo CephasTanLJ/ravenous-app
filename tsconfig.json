@@ -18,8 +18,12 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/*"],
+      "@/Components/*": ["./src/components/*"],
+      "@/Containers/*": ["./src/Container/*"],
+      "@/utils/*": ["./src/utils/*"]
+    },
+    "baseUrl": "."
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
